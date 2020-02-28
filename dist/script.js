@@ -1,9 +1,13 @@
 let todoList = {
   todos: [],
   displayTodos: function () {
-    console.log('My todos:');
-    for (let i = 0; i < this.todos.length; i++) {
-      console.log(this.todos[i].todoText);
+    if (this.todos.length === 0) {
+      console.log('Die Liste ist leer.')
+    } else {
+      console.log('My todos:');
+      for (let i = 0; i < this.todos.length; i++) {
+        console.log(this.todos[i].todoText);
+      }
     }
   },
 
