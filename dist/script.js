@@ -1,8 +1,12 @@
 let todoList = {
   todos: [],
   displayTodos: function () {
-    console.log('My todos:', this.todos)
+    console.log('My todos:');
+    for (let i = 0; i < this.todos.length; i++) {
+      console.log(this.todos[i].todoText);
+    }
   },
+
 
   addTodo: function(todoText) { // todoText ist ein parameter Bsp.'hi'
     this.todos.push({
