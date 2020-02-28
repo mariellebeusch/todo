@@ -27,7 +27,6 @@ let todoList = {
   },
 
   changeTodo: function (position, todoText) {
-    // this.todos[position] = newValue;
     this.todos[position].todoText = todoText; // todoText parameter wird wieder verwendet
     this.displayTodos();
   },
@@ -41,5 +40,22 @@ let todoList = {
     let todo = this.todos[position];
     todo.completed = !todo.completed;  // gegenteil von ist-zustand von todo.completed
     this.displayTodos();
+  },
+
+  toggleAll:  function () {
+    let totalTodos = this.todos.length;
+    let completedTodos = 0;
+
+    for (let i = 0; 0 < totalTodos; i++) {
+      if (this.todos[i].completed === true) {
+        completedTodos++;
+      }
+    }
+
+    if (completedTodos === totalTodos) {
+      for (let i = 0; i < totalTodos;  i++) {
+        this.todos[i].completed = false;
+      }
+    }
   }
 };
