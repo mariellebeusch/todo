@@ -42,19 +42,23 @@ let todoList = {
     this.displayTodos();
   },
 
-  toggleAll:  function () {
+  toggleAll: function () {
     let totalTodos = this.todos.length;
     let completedTodos = 0;
 
-    for (let i = 0; 0 < totalTodos; i++) {
+    for (let i = 0; i < totalTodos; i++) {
       if (this.todos[i].completed === true) {
         completedTodos++;
       }
     }
 
     if (completedTodos === totalTodos) {
-      for (let i = 0; i < totalTodos;  i++) {
+      for (let i = 0; i < totalTodos; i++) {
         this.todos[i].completed = false;
+      }
+    } else {
+      for (let i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = true;
       }
     }
   }
