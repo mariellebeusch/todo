@@ -14,7 +14,7 @@ let todoList = {
 
   changeTodo: function (position, todoText) {
     // this.todos[position] = newValue;
-    this.todos[position].todoText = todoText;
+    this.todos[position].todoText = todoText; // todoText parameter wird wieder verwendet
     this.displayTodos();
   },
 
@@ -25,7 +25,7 @@ let todoList = {
 
   toggleCompleted: function (position) {
     let todo = this.todos[position];
-    todo.completed = !todo.completed;
+    todo.completed = !todo.completed;  // gegenteil von ist-zustand von todo.completed
     this.displayTodos();
   }
 };
