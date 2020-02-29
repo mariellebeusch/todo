@@ -67,19 +67,28 @@ let todoList = {
   }
 };
 
-// Button referenzieren
+// Unschöne Variante:
 
-let displayTodosButton = document.getElementById('displayTodosButton');
-let toggleAllButton = document.getElementById('toggleAllButton');
+// let displayTodosButton = document.getElementById('displayTodosButton');
+// let toggleAllButton = document.getElementById('toggleAllButton');
 
-// Aktiviere displayTodos Methode wenn jemand den Todos anzeigen Button klickt
+// // Aktiviere displayTodos Methode wenn jemand den Todos anzeigen Button klickt
 
-displayTodosButton.addEventListener('click', function () {
-  todoList.displayTodos();
-});
+// displayTodosButton.addEventListener('click', function () {
+//   todoList.displayTodos();
+// });
 
-toggleAllButton.addEventListener('click', function () {
-  todoList.toggleAll();
-});
+// toggleAllButton.addEventListener('click', function () {
+//   todoList.toggleAll();
+// });
 
+// Refactor – optimalere Lösung
 
+let handlers = {
+  displayTodos: function () {
+    todoList.displayTodos();
+  },
+  toggleAll: function () {
+    todoList.toggleAll();
+  }
+};
