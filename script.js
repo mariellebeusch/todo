@@ -69,10 +69,16 @@ let todoList = {
 // Button referenzieren
 
 let displayTodosButton = document.getElementById('displayTodosButton');
-console.log(displayTodosButton);
+let toggleAllButton = document.getElementById('toggleAllButton');
 
 // Aktiviere displayTodos Methode wenn jemand den Todos anzeigen Button klickt
 
 displayTodosButton.addEventListener('click', function () {
   todoList.displayTodos();
-})
+});
+
+toggleAllButton.addEventListener('click', function () {
+  todoList.toggleAll();
+});
+
+
