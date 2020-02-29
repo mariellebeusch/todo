@@ -61,5 +61,18 @@ let todoList = {
         this.todos[i].completed = true;
       }
     }
+
+    this.displayTodos();
   }
 };
+
+// Button referenzieren
+
+let displayTodosButton = document.getElementById('displayTodosButton');
+console.log(displayTodosButton);
+
+// Aktiviere displayTodos Methode wenn jemand den Todos anzeigen Button klickt
+
+displayTodosButton.addEventListener('click', function () {
+  todoList.displayTodos();
+})
