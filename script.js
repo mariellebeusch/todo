@@ -18,7 +18,6 @@ let todoList = {
     }
   },
 
-
   addTodo: function(todoText) { // todoText ist ein parameter Bsp.'hi'
     this.todos.push({
       todoText: todoText, // dann würde hier 'hi' stehen
@@ -67,7 +66,7 @@ let todoList = {
   }
 };
 
-// Unschöne Variante:
+// Unschöne (lange) Variante:
 
 // let displayTodosButton = document.getElementById('displayTodosButton');
 // let toggleAllButton = document.getElementById('toggleAllButton');
@@ -90,5 +89,10 @@ let handlers = {
   },
   toggleAll: function () {
     todoList.toggleAll();
+  },
+  addTodo: function () {
+    let addTodoTextInput = document.getElementById('addTodoTextInput');
+    todoList.addTodo(addTodoTextInput.value);
+    addTodoTextInput.value = '';
   }
 };

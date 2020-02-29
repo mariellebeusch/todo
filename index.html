@@ -11,8 +11,16 @@
 <body>
     <h1>Todo Liste</h1>
 
-    <button onclick="handlers.displayTodos()">Todos anzeigen</button>
-    <button onclick="handlers.toggleAll()">Alle aktivieren</button>
+    <div>
+        <button onclick="handlers.displayTodos()">Todos anzeigen</button>
+        <button onclick="handlers.toggleAll()">Alle aktivieren</button>
+
+    </div>
+
+    <div>
+        <button onclick="handlers.addTodo()">Hinzufügen</button>
+        <input id="addTodoTextInput" type="text">
+    </div>
 
     <script src="script.js" type="text/javascript"></script>
 </body>
